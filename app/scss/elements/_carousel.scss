@@ -1,0 +1,16 @@
+.list-our-box {
+    background-color: white;
+    @include flex-center();
+    &:hover{
+        cursor: pointer;
+    }
+    .icon-carousel {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: #ff493b;
+        @include flex-center();
+        @include set-font(28px, white, normal);
+       
+    }
+}

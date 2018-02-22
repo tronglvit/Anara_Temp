@@ -1,0 +1,213 @@
+/* float */
+
+.fl-l {
+  float: left;
+}
+
+.fl-r {
+  float: right;
+}
+
+.mr-l-10 {
+  margin-left: 10px;
+}
+
+.mr-l-20 {
+  margin-left: 20px;
+}
+
+.mr-r-10 {
+  margin-right: 10px;
+}
+
+/* padding */
+
+.pd-10 {
+  padding: 10px;
+}
+
+.pd-r-5 {
+  padding-right: 5px;
+}
+
+.pd-15 {
+  padding: 15px;
+}
+
+.pd-b-15 {
+  padding-bottom: 15px;
+}
+
+.pd-hoz-30 {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.pd-bt-30 {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.pd-bt-10 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* padding center */
+
+.pd-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* pd-hoz-0 */
+
+.pd-hoz-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* pd-hoz-20 */
+
+.pd-hoz-20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* margin */
+
+.m-hoz-30 {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.mr-t-40 {
+  margin-top: 40px;
+}
+
+.mr-t-15 {
+  margin-top: 15px;
+}
+
+.mr-b-10 {
+  margin-bottom: 10px;
+}
+
+.mr-b-20 {
+  margin-bottom: 20px;
+}
+
+.mr-r-40 {
+  margin-right: 40px;
+}
+
+.mr-hoz-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.background-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.img {
+  object-fit: cover;
+  height: auto;
+}
+
+.short-description {
+  @include set-font(20px, $color_font_title, 30px);
+  font-weight: 300;
+}
+
+.line {
+  position: relative;
+  height: 30px;
+  margin-top: 15px;
+  @include flex-start();
+  &-main {
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: red;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 2px;
+      background-color: red;
+      right: 2px;
+      top: -5px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: red;
+      left: 5px;
+      bottom: -5px;
+    }
+  }
+}
+
+.description {
+  @include set-font(14px, $color_font, 24px);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  height: 72px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.read-more {
+  @include set-font(12px, $color_readmore, 14px);
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  @include flex-start();
+  &-icon {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $color_font;
+  }
+}
+
+.title {
+  @include set-font(34px, $color_font, 12px);
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.author {
+  @include set-font(16px, $color_font_title, 20px);
+  text-transform: uppercase;
+  font-family: 'Lora', serif;
+}
+
+.hoz-text {
+  @include flex-center();
+  &-author {
+    color: white;
+  }
+  &-title {
+    @include set-font(48px, white, normal);
+  }
+  &-short-description {
+    color: white;
+  }
+}

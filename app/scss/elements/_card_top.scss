@@ -1,0 +1,19 @@
+.card {
+    position: relative;
+    padding-top: 70px;
+    .count {
+        font-family: 'Playfair Display', serif;
+        font-weight: 900;
+        font-size: 200px;
+        font-style: italic;
+        color: $color_count;
+        line-height: 24px;
+    }
+    &_detail {
+        &_author {
+            @include set-font(18px, #787d85, 25px);
+            font-weight: 400;
+            text-transform: none;
+        }
+    }
+}

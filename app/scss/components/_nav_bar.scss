@@ -1,0 +1,31 @@
+.nav_bar {
+    position: fixed;
+    width: 100%;
+    &_list {
+        @include flex-end();
+        .list_parent {
+            position: relative;
+            .nav_link {
+                text-transform: uppercase;
+                @include set-font(14px, $color-font-primary, 12px);
+                font-weight: 500;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .list_child {
+                display: none;
+            }
+            &:hover .list_child {
+                position: absolute;
+                top: 100%;
+                display: block;
+            }
+        }
+        .nav_link_down {
+            @include set-font(14px, $color-font-primary, 12px);
+            margin-left: 10px;
+            
+        }
+    }
+}

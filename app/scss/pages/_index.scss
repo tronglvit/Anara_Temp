@@ -1,0 +1,25 @@
+.content_primary {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    .block_detail_right {
+        margin-top: 70px;
+        &_author {
+            @extend .author;
+            font-style: italic;
+            font-weight: 400px;
+        }
+        &_title {
+            @extend .title;
+            font-size: 48px;
+            line-height: normal;
+        }
+    }
+}
+
+.our-service {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat-y;
+}

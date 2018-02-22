@@ -1,0 +1,35 @@
+/* ITCSS - OOCSS */
+
+/* vendors */
+
+@import "vendors/font-awesome-animation.min";
+/*@import "vendors/bootstrap-grid.min";*/
+
+@import "vendors/bootstrap-theme.min";
+@import "vendors/bootstrap.min";
+/* helpers */
+
+@import "helpers/colors";
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/units";
+@import "helpers/zindex";
+@import "helpers/base";
+/* generic */
+
+@import "generics/box-sizing";
+@import "generics/normalize";
+@import "generics/reset";
+/* components */
+
+@import "elements/all";
+/* layouts */
+
+@import "components/header";
+@import "components/nav_bar";
+/* pages */
+
+@import "pages/index";
+/* trumps */
+
+@import "trumps/all";

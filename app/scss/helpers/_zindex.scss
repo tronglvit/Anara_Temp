@@ -1,0 +1,4 @@
+$zindex: ( modal: 10000, overlay: 8000, dropdown: 7000, header: 9000, footer: 5000);
+@function z-index($label) {
+  @return map-get($zindex, $label);
+}
