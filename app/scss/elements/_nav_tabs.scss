@@ -1,0 +1,42 @@
+.nav-tab{
+	@include flex-start();
+	.tab-link{
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include set-font(14px,$color_font_title,normal);
+		font-weight: 400;
+		&:hover{
+			color: $color_nav_tab_link;
+		}
+		&:hover:after{
+			content:'';
+			height: 2px;
+			background-color: $color_nav_tab_link;
+			width: 100%;
+			top: 100%;
+			left: 0;
+			animation-name: animation-tab-link;
+			animation-duration: 0.5s;
+			animation-direction: normal;
+			animation-fill-mode: both;
+			position: absolute;
+			animation-play-state: running;
+		}
+	}
+	.active{
+		.tab-link{
+			color: $color_nav_tab_link;
+			&:before{
+				position: absolute;
+				content:'';
+				height: 2px;
+				background-color: $color_nav_tab_link;
+				width: 100%;
+				top: 100%;
+				left: 0;
+			}
+		}
+		
+	}
+}

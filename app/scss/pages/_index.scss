@@ -1,4 +1,4 @@
-.content_primary {
+.block_content {
     padding-top: 100px;
     padding-bottom: 50px;
     .block_detail_right {
@@ -22,4 +22,30 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: repeat-y;
+}
+
+.count_item {
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 50px;
+    .icon-count {
+        @include set-font(48px, white, normal);
+    }
+    &_quantity {
+        @include set-font(48px, white, 40px);
+        font-weight: 300;
+    }
+    &_name {
+        font-family: 'Lora', serif;
+        font-weight: 400;
+        @include set-font(18px, white, 40px);
+        font-style: italic;
+        text-transform: uppercase;
+    }
+}
+
+.our_portfolio {
+    @include flex-center();
 }
